@@ -1,0 +1,40 @@
+﻿@page
+@model SynthesisAssignment.Pages.TournamentsModel
+@{
+    <link rel="stylesheet" href="/css/tournaments.css" />
+}
+
+
+<header>
+    <ul>
+        <li><a asp-area="" asp-page="/Tournaments">Tournaments</a></li>
+        <li><a asp-area="" asp-page="/Profile">Profile</a></li>
+        <li><a asp-area="" asp-page="/Players">Players</a></li>
+        <li><a asp-area="" asp-page="/Schedules">Tournament Schedules</a></li>
+    </ul>
+</header>
+
+<section>
+    @foreach (var a in Model.Tournaments)
+    {
+        <div class="grid">
+            <div class="wrapper">
+                <div class="card front-face">
+                    <img src="~/pics/card.png">
+                </div>
+                <div class="card back-face">
+                    <div class="info">
+                        <div class="title">
+                            Tournament details (id: @a.Id)
+                        </div>
+                        <p>
+                            Location:@a.Location <br><br />Description: @a.Description<br>Sport:@a.Sport<br />
+                        </p>
+                        <input type="submit" value="Sign up" asp-page-handler="SignUp" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    }
+    </section>

@@ -1,0 +1,33 @@
+﻿@page
+@model SynthesisAssignment.Pages.ProfileModel
+@{
+    <link rel="stylesheet" href="/css/profile2.css" />
+    @using Microsoft.AspNetCore.Http
+
+    @HttpContext.Session.GetString("username");
+    @HttpContext.Session.GetString("email");
+    @HttpContext.Session.GetString("role");
+}
+
+<header>
+    <ul>
+        <li><a asp-area="" asp-page="/Tournaments">Tournaments</a></li>
+        <li><a asp-area="" asp-page="/Profile">Profile</a></li>
+        <li><a asp-area="" asp-page="/Players">Players</a></li>
+        <li><a asp-area="" asp-page="/Schedules">Tournament Schedules</a></li>
+    </ul>
+</header>
+
+<div class="container">
+    <div class="content">
+
+        <h2>Hello! Welcome back!</h2>
+
+        <h3>Email address: @User.Identity.Name</h3>
+
+        <h3>Account Type: player </h3>
+
+        <h3>Games Played:</h3>
+        <h3>Future games:</h3>
+    </div>
+</div>

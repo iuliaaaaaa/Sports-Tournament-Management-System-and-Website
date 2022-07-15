@@ -1,0 +1,87 @@
+body {
+    background-image: url(../pics/backgroundPlayers.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+    li a {
+        font-family: 'Lato', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        display: block;
+        color: white;
+        text-align: right;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover:not(.active) {
+            color: orange;
+        }
+
+.active {
+    color: #89d4cf;
+}
+
+header {
+    margin: 0;
+    background-color: #f2f2f2;
+    position: sticky;
+    margin-bottom: 20px;
+}
+
+
+
+.styled-table {
+    position: absolute;
+    border-collapse: collapse;
+    padding-top: 130px;
+    margin-left: 25px;
+    margin-right:25px;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 1000px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+    .styled-table thead tr {
+        background: linear-gradient(90deg, rgba(250,229,161,1) 0%, rgba(236,143,73,1) 100%);
+        color: #ffffff;
+        text-align: left;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 15px;
+    }
+
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
